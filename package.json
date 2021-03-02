@@ -1,10 +1,11 @@
 {
-  "name": "request",
+  "name": "request-func",
   "version": "1.0.0",
   "description": "基于 axios 库封装的请求工具",
-  "main": "index.js",
+  "main": "dist/request.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/index.js --out-file dist/request.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,12 @@
   },
   "homepage": "https://github.com/zhongs/request#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9"
   }
 }
