@@ -1,0 +1,25 @@
+{
+  "name": "request",
+  "version": "1.0.0",
+  "description": "基于 axios 库封装的请求工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhongs/request.git"
+  },
+  "keywords": [
+    "request"
+  ],
+  "author": "zhongs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhongs/request/issues"
+  },
+  "homepage": "https://github.com/zhongs/request#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
