@@ -9,18 +9,22 @@ request.axiosConfigs = {
 }
 
 const userAPI = {
-  getTopics: `GET /topics`
+  getTopics: `GET /topics`,
+  getTopic: ({ id }) => `GET /topic/${id}`
 };
-
-test('userAPI length', () => {
-  const apis = request(userAPI)
-  expect(Object.keys(apis).length).toBe(1)
-});
-
 
 test('userAPI reponse data is array', () => {
   const apis = request(userAPI)
   return apis.getTopics().then(res => {
     expect(res.data.length).toBe(40)
+  })
+});
+
+
+test('userAPI reponse data is Object', () => {
+  const apis = request(userAPI)
+  const id = '5433d5e4e737cbe96dcef312'
+  return apis.getTopic({ id }).then(res => {
+    expect(res.data.id).toBe(id)
   })
 });
